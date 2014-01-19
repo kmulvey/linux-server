@@ -6,9 +6,7 @@ yum -y update
 
 # Install puppet
 yum -y install puppet puppet-server
-systemctl enable puppet
 systemctl enable puppetmaster
-systemctl stop puppet
 systemctl stop puppetmaster
 
 # Remove SSL directory (will be regenerated when restarted)
@@ -20,5 +18,4 @@ cat >> /etc/puppet/puppet.conf <<-EOF
 server = localhost
 EOF
 
-systemctl start puppet
 systemctl start puppetmaster
