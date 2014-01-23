@@ -1,4 +1,5 @@
 include '::ntp'
+include 'denyhosts'
 
 #class desktop {
 	# below packages do not require configs
