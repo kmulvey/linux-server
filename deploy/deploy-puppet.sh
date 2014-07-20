@@ -19,3 +19,5 @@ server = localhost
 EOF
 
 systemctl start puppetmaster
+
+puppet module install puppetlabs-ntp
