@@ -1,6 +1,7 @@
 
 class { '::ntp':
 	servers => [ 'time.nist.gov', 'time-d.nist.gov', 'nist.time.nosc.us', 'time-c.timefreq.bldrdoc.gov' ],
+	restrict => ['127.0.0.1'],
 }
 #class desktop {
 	# below packages do not require configs
