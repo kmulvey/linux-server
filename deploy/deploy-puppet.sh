@@ -20,4 +20,4 @@ EOF
 
 systemctl start puppetmaster
 
-puppet module install puppetlabs-ntp
+puppet module install puppetlabs-ntp puppetlabs-denyhosts
