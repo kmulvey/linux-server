@@ -3,9 +3,10 @@ class { '::ntp':
 	servers => [ 'time.nist.gov', 'time-d.nist.gov', 'nist.time.nosc.us', 'time-c.timefreq.bldrdoc.gov' ],
 	restrict => ['127.0.0.1'],
 }
-#class desktop {
+class desktop {
 	# below packages do not require configs
 	package { alpine: ensure => latest }
+	package { gcc: ensure => latest }
 	package { git: ensure => latest }
 	package { golang: ensure => latest }
 	package { google-chrome-beta: ensure => latest }
@@ -20,8 +21,9 @@ class { '::ntp':
 	package { kernel: ensure => latest }
 	package { kernel-headers: ensure => latest }
 	package { nodejs: ensure => latest }
+	package { npm: ensure => latest }
 	package { pidgin: ensure => latest }
 	package { sudo: ensure => latest }
 	package { tmux: ensure => latest }
 	package { vim-enhanced: ensure => latest }
-#}
+}
