@@ -1,11 +1,12 @@
 include '::ntp'
 include 'denyhosts'
 
-#class desktop {
+class desktop {
 	# below packages do not require configs
 	package { alpine: ensure => latest }
 	package { gcc: ensure => latest }
 	package { git: ensure => latest }
+	package { golang: ensure => latest }
 	package { google-chrome-beta: ensure => latest }
 	package { google-droid-serif-fonts: ensure => latest }
 	package { google-droid-sans-fonts: ensure => latest }
@@ -25,4 +26,4 @@ include 'denyhosts'
 	package { sudo: ensure => latest }
 	package { tmux: ensure => latest }
 	package { vim-enhanced: ensure => latest }
-#}
+}
