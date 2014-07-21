@@ -20,4 +20,4 @@ EOF
 
 systemctl start puppetmaster
 
-puppet module install puppetlabs-ntp puppetlabs-denyhosts puppetlabs-nginx saz-ssh
+puppet module install puppetlabs-ntp puppetlabs-denyhosts puppetlabs-nginx saz-ssh puppetlabs-vcsrepo
