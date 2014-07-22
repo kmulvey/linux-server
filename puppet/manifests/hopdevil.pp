@@ -48,8 +48,10 @@ class desktop {
 	package { firefox: ensure => latest }
 	package { kernel: ensure => latest }
 	package { kernel-headers: ensure => latest }
+	package { make: ensure => latest }
 	package { nodejs: ensure => latest }
 	package { npm: ensure => latest }
+	package { openssl: ensure => latest }
 	package { pidgin: ensure => latest }
 	package { sudo: ensure => latest }
 	package { tmux: ensure => latest }
