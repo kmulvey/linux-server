@@ -48,4 +48,5 @@ class linux {
 	package { sudo: ensure => latest }
 	package { tmux: ensure => latest }
 	package { vim-enhanced: ensure => latest }
+	package { wget: ensure => latest }
 }
