@@ -46,6 +46,7 @@ class linux {
 	package { npm: ensure => latest }
 	package { openssl: ensure => latest }
 	package { sudo: ensure => latest }
+	package { systemd: ensure => latest }
 	package { tmux: ensure => latest }
 	package { vim-enhanced: ensure => latest }
 	package { wget: ensure => latest }
