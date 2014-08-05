@@ -1,3 +1,5 @@
+import 'linux.pp'
+
 class desktop {
 	# below packages do not require configs
 	package { alpine: ensure => latest }
