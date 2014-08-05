@@ -31,23 +31,21 @@ class { 'ssh':
 	},
 }
 
-class linux {
-	# below packages do not require configs
-	package { gcc: ensure => latest }
-	package { git: ensure => latest }
-	package { golang: ensure => latest }
-	package { gnupg2: ensure => latest }
-	package { htop: ensure => latest }
-	package { 'java-1.8.0-openjdk': ensure => latest }
-	package { kernel: ensure => latest }
-	package { kernel-headers: ensure => latest }
-	package { make: ensure => latest }
-	package { nodejs: ensure => latest }
-	package { npm: ensure => latest }
-	package { openssl: ensure => latest }
-	package { sudo: ensure => latest }
-	package { systemd: ensure => latest }
-	package { tmux: ensure => latest }
-	package { vim-enhanced: ensure => latest }
-	package { wget: ensure => latest }
-}
+# below packages do not require configs
+package { gcc: ensure => latest }
+package { git: ensure => latest }
+package { golang: ensure => latest }
+package { gnupg2: ensure => latest }
+package { htop: ensure => latest }
+package { 'java-1.8.0-openjdk': ensure => latest }
+package { kernel: ensure => latest }
+package { kernel-headers: ensure => latest }
+package { make: ensure => latest }
+package { nodejs: ensure => latest }
+package { npm: ensure => latest }
+package { openssl: ensure => latest }
+package { sudo: ensure => latest }
+package { systemd: ensure => latest }
+package { tmux: ensure => latest }
+package { vim-enhanced: ensure => latest }
+package { wget: ensure => latest }
