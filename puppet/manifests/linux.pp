@@ -39,6 +39,7 @@ package { gnupg2: ensure => latest }
 package { htop: ensure => latest }
 package { 'java-1.8.0-openjdk': ensure => latest }
 package { kernel: ensure => latest }
+package { kernel-devel: ensure => latest }
 package { kernel-headers: ensure => latest }
 package { make: ensure => latest }
 package { nodejs: ensure => latest }
