@@ -1,3 +1,9 @@
+if versioncmp($::puppetversion,'3.6.1') >= 0 {
+	$allow_virtual_packages = hiera('allow_virtual_packages',false)
+	Package {
+		allow_virtual => $allow_virtual_packages,
+	}
+}
 
 class { '::ntp':
 	servers => [ 'time.nist.gov', 'time-d.nist.gov', 'nist.time.nosc.us', 'time-c.timefreq.bldrdoc.gov' ],
