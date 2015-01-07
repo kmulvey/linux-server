@@ -41,6 +41,7 @@ class { 'ssh':
 package { gcc: ensure => latest }
 package { git: ensure => latest }
 package { golang: ensure => latest }
+package { golang-godoc: ensure => latest }
 package { gnupg2: ensure => latest }
 package { htop: ensure => latest }
 package { 'java-1.8.0-openjdk': ensure => latest }
