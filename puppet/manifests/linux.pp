@@ -38,6 +38,7 @@ class { 'ssh':
 }
 
 # below packages do not require configs
+package { bash: ensure => latest }
 package { gcc: ensure => latest }
 package { git: ensure => latest }
 package { golang: ensure => latest }
