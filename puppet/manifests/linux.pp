@@ -41,6 +41,7 @@ class { 'ssh':
 package { bash: ensure => latest }
 package { gcc: ensure => latest }
 package { git: ensure => latest }
+package { git-extras: ensure => latest }
 package { golang: ensure => latest }
 package { golang-godoc: ensure => latest }
 package { gnupg2: ensure => latest }
