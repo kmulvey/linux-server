@@ -42,6 +42,7 @@ package { bash: ensure => latest }
 package { docker-io: ensure => latest }
 package { gcc: ensure => latest }
 package { git: ensure => latest }
+package { git-email: ensure => latest }
 package { git-extras: ensure => latest }
 package { golang: ensure => latest }
 package { golang-godoc: ensure => latest }
