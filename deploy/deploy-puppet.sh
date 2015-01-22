@@ -5,7 +5,7 @@ yum makecache
 yum -y update
 
 # Install puppet
-yum -y install puppet puppet-server
+yum -y install puppet puppet-server git
 systemctl enable puppetmaster
 systemctl stop puppetmaster
 
