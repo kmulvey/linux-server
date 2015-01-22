@@ -32,5 +32,4 @@ systemctl start puppetmaster
 puppet module install puppetlabs-ntp 
 puppet module install puppetlabs-denyhosts 
 puppet module install puppetlabs-nginx 
-puppet module install saz-ssh 
 puppet module install puppetlabs-vcsrepo
