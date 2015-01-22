@@ -31,5 +31,5 @@ systemctl start puppetmaster
 
 puppet module install puppetlabs-ntp 
 puppet module install puppetlabs-denyhosts 
-puppet module install puppetlabs-nginx 
+puppet module install jfryman-nginx 
 puppet module install puppetlabs-vcsrepo
