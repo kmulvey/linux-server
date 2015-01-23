@@ -40,6 +40,7 @@ class { 'ssh':
 # below packages do not require configs
 package { bash: ensure => latest }
 package { docker-io: ensure => latest }
+package { fpaste: ensure => latest }
 package { gcc: ensure => latest }
 package { git: ensure => latest }
 package { git-email: ensure => latest }
