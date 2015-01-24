@@ -1,14 +1,17 @@
 if versioncmp($::puppetversion,'3.6.1') >= 0 {
-	$allow_virtual_packages = hiera('allow_virtual_packages',false)
-	Package {
-		allow_virtual => $allow_virtual_packages,
-	}
+  Package {
+    allow_virtual => true,
+  }
 }
 
 class { '::ntp':
 	servers => [ 'time.nist.gov', 'time-d.nist.gov', 'nist.time.nosc.us', 'time-c.timefreq.bldrdoc.gov' ],
 	restrict => ['127.0.0.1'],
 }
+class { "denyhosts":
+	adminemail => "something"
+}
+
 
 class { 'ssh':
 	storeconfigs_enabled => false,
@@ -23,6 +26,7 @@ class { 'ssh':
 		'PermitEmptyPasswords' => 'no',
 		'PermitRootLogin' => 'no',
 		'Port' => [22],
+		'Protocol' => 2,
 		'RhostsAuthentication' => 'no',
 		'RhostsRSAAuthentication' => 'no',
 		'RSAAuthentication' => 'yes',
@@ -37,30 +41,35 @@ class { 'ssh':
 	},
 }
 
-# below packages do not require configs
-package { bash: ensure => latest }
-package { docker-io: ensure => latest }
-package { fpaste: ensure => latest }
-package { gcc: ensure => latest }
-package { git: ensure => latest }
-package { git-email: ensure => latest }
-package { git-extras: ensure => latest }
-package { golang: ensure => latest }
-package { golang-godoc: ensure => latest }
-package { gnupg2: ensure => latest }
-package { htop: ensure => latest }
-package { 'java-1.8.0-openjdk': ensure => latest }
-package { kernel: ensure => latest }
-package { kernel-devel: ensure => latest }
-package { kernel-headers: ensure => latest }
-package { make: ensure => latest }
-package { nodejs: ensure => latest }
-package { npm: ensure => latest }
-package { openssl: ensure => latest }
-package { puppet: ensure => latest }
-package { rsyslog: ensure => latest }
-package { sudo: ensure => latest }
-package { systemd: ensure => latest }
-package { tmux: ensure => latest }
-package { vim-enhanced: ensure => latest }
-package { wget: ensure => latest }
+
+class base {
+	# below packages do not require configs
+	package { curl: ensure => latest }
+	package { '@development-tools': ensure => latest }
+	package { gcc: ensure => latest }
+	package { git: ensure => latest }
+	package { golang: ensure => latest }
+	package { golang-godoc: ensure => latest }
+	package { gnupg: ensure => latest }
+	package { gnupg2: ensure => latest }
+	package { htop: ensure => latest }
+	package { 'java-1.7.0-openjdk': ensure => absent }
+	package { 'java-1.8.0-openjdk': ensure => latest }
+	package { fedora-packager: ensure => latest }
+	package { kernel: ensure => latest }
+	package { kernel-devel: ensure => latest }
+	package { kernel-headers: ensure => latest }
+	package { make: ensure => latest }
+	package { nodejs: ensure => latest }
+	package { nmap: ensure => latest }
+	package { npm: ensure => latest }
+	package { openssl: ensure => latest }
+	package { puppet: ensure => latest }
+	package { rsyslog: ensure => latest }
+	package { systemd: ensure => latest }
+	package { sudo: ensure => latest }
+	package { tmux: ensure => latest }
+	package { vim-enhanced: ensure => latest }
+}
+
+include 'base'
