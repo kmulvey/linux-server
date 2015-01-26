@@ -60,6 +60,7 @@ class base {
 	package { kernel-devel: ensure => latest }
 	package { kernel-headers: ensure => latest }
 	package { make: ensure => latest }
+	package { mercurial: ensure => latest }
 	package { nodejs: ensure => latest }
 	package { nmap: ensure => latest }
 	package { npm: ensure => latest }
