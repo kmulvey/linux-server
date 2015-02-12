@@ -48,6 +48,7 @@ class base {
 	package { '@development-tools': ensure => latest }
 	package { gcc: ensure => latest }
 	package { git: ensure => latest }
+	package { git-email: ensure => latest }
 	package { golang: ensure => latest }
 	package { golang-godoc: ensure => latest }
 	package { gnupg: ensure => latest }
