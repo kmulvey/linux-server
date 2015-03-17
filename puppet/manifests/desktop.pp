@@ -9,4 +9,5 @@ class desktop {
 	package { google-droid-sans-mono-fonts: ensure => latest }
 	package { firefox: ensure => latest }
 	package { pidgin: ensure => latest }
+	package { pidgin-libnotify: ensure => latest }
 }
