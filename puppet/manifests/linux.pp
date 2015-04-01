@@ -68,6 +68,8 @@ class base {
 	package { openssl: ensure => latest }
 	package { puppet: ensure => latest }
 	package { rsyslog: ensure => latest }
+	package { sbt: ensure => latest }
+	package { scala: ensure => latest }
 	package { systemd: ensure => latest }
 	package { sudo: ensure => latest }
 	package { tmux: ensure => latest }
