@@ -66,6 +66,7 @@ class base {
 	package { nmap: ensure => latest }
 	package { npm: ensure => latest }
 	package { openssl: ensure => latest }
+	package { parallel: ensure => latest }
 	package { puppet: ensure => latest }
 	package { rsyslog: ensure => latest }
 	package { sbt: ensure => latest }
