@@ -10,4 +10,5 @@ class desktop {
 	package { firefox: ensure => latest }
 	package { pidgin: ensure => latest }
 	package { pidgin-libnotify: ensure => latest }
+	package { pulseaudio-equalizer: ensure => latest }	
 }
