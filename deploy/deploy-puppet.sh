@@ -1,11 +1,11 @@
 #!/bin/bash
 # upgrade all packages
-yum clean all
-yum makecache
-yum -y update
+dnf clean all
+dnf makecache
+dnf -y update
 
 # Install puppet
-yum -y install puppet puppet-server git
+dnf -y install puppet puppet-server git
 systemctl enable puppetmaster
 systemctl stop puppetmaster
 
