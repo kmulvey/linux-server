@@ -12,6 +12,11 @@ systemctl stop puppetmaster
 # Remove SSL directory (will be regenerated when restarted)
 rm -rf /var/lib/puppet/ssl
 
+# regen ssl keys
+rm -rf /etc/ssh/ssh_host*
+ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa
+ssh-keygen -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa
+
 # Configure Puppet to talk to our puppet master (this case, single instance)
 cat >> /etc/puppet/puppet.conf <<-EOF
 [agent]
