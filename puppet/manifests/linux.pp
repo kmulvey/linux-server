@@ -22,6 +22,7 @@ class { 'ssh':
 		'HostbasedAuthentication' => 'no',
 		'IgnoreRhosts' => 'yes',
 		'LogLevel' => 'INFO',
+		'MACs' => 'hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,hmac-ripemd160,umac-128@openssh.com',
 		'PasswordAuthentication' => 'yes',
 		'PermitEmptyPasswords' => 'no',
 		'PermitRootLogin' => 'no',
