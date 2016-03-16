@@ -5,7 +5,7 @@ dnf makecache
 dnf -y update
 
 # Install puppet
-dnf -y install puppet puppet-server git go
+dnf -y install puppet puppet-server git golang
 systemctl enable puppetmaster
 systemctl stop puppetmaster
 
