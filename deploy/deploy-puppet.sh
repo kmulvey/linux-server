@@ -5,7 +5,7 @@ dnf makecache
 dnf -y update
 
 # Install puppet
-dnf -y install puppet puppet-server git
+dnf -y install puppet puppet-server git go
 systemctl enable puppetmaster
 systemctl stop puppetmaster
 
@@ -39,3 +39,5 @@ puppet module install puppetlabs-denyhosts
 puppet module install jfryman-nginx 
 puppet module install saz-ssh
 puppet module install puppetlabs-vcsrepo
+
+go get -u golang.org/x/tools/cmd/gorename github.com/alecthomas/gometalinter github.com/kisielk/errcheck github.com/nsf/gocodehonnef.co/go/implements golang.org/x/tools/cmd/goimports github.com/rogpeppe/godef  golang.org/x/tools/cmd/godoc
